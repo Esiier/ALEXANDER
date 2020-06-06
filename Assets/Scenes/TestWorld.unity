@@ -214,36 +214,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13956174}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &441728714
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 441728715}
-  m_Layer: 0
-  m_Name: GroundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &441728715
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441728714}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.778, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 604441080}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &444751514
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,45 +497,6 @@ Transform:
   m_Father: {fileID: 1439879326}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &604441078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9120336536828241915, guid: 88a7d07596c9218478f2c034ba0521a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5271208230633644773}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &604441079 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 8385318099374948178, guid: 88a7d07596c9218478f2c034ba0521a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5271208230633644773}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &604441080 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4644368443190548477, guid: 88a7d07596c9218478f2c034ba0521a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5271208230633644773}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &604441081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604441078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c343a97a66f70da4f9f0542775f4a517, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 604441079}
-  speedWalk: 14
-  speedRun: 20
-  gravity: -19.62
-  GroundCheck: {fileID: 441728715}
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!1 &712869689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,7 +1761,7 @@ GameObject:
   - component: {fileID: 1893299756}
   - component: {fileID: 1893299755}
   - component: {fileID: 1893299754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JumpBost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1905,7 +1836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893299753}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.92, y: 1.79, z: 4.17}
+  m_LocalPosition: {x: 11.92, y: 1.17, z: -6.96}
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 1159687499}
@@ -2104,6 +2035,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 604441081, guid: 88a7d07596c9218478f2c034ba0521a2, type: 3}
+      propertyPath: jumpPlatformMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 4644368443190548477, guid: 88a7d07596c9218478f2c034ba0521a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2158,11 +2093,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8385318099374948178, guid: 88a7d07596c9218478f2c034ba0521a2,
-        type: 3}
-      propertyPath: m_StepOffset
-      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 9120336536828241915, guid: 88a7d07596c9218478f2c034ba0521a2,
         type: 3}
